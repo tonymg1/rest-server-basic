@@ -31,7 +31,7 @@ const UsuarioSchema = Schema({
     },
 })
 
-//Evitar que Postman devuelva _v y password (solo función tradicional)
+
 UsuarioSchema.methods.toJSON = function(){
     const {__v, password, ...user}  = this.toObject();
     return user
